@@ -11,10 +11,9 @@
 <div class="container row justify-content-start">
     <div class="d-flex flex-column p-4 gap-4 py-md-5 align-items-start justify-content-center col-4">
         <ul class="dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px" data-bs-theme="light">
-            <li><a class="dropdown-item rounded-2" href="/weather/Zhytomyr">Житомир</a></li>
-            <li><a class="dropdown-item rounded-2" href="/weather/Kyiv">Київ</a></li>
-            <li><a class="dropdown-item rounded-2" href="/weather/Poltava">Полтава</a></li>
-            <li><a class="dropdown-item rounded-2" href="/weather/Sumy">Суми</a></li>
+            {{#each cities}}
+                <li><a class="dropdown-item rounded-2" href="/weather/{{ slug }}">{{ name }}</a></li>
+            {{/each}}
         </ul>
     </div>
     <div class="container col-8  p-4 gap-4 py-md-5">
